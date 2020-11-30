@@ -11,10 +11,10 @@ class user_seeder extends Seeder
      */
     public function run()
     {
-        //1
+        //Webmaster
         DB::table('users')->insert([
-            'nombre' => 'admin',
-            'apellido' => 'admin',
+            'nombre' => 'Admin',
+            'apellido' => 'Admin',
             'telefono' => 12345678,
             'email' => 'admin@example.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
@@ -22,96 +22,87 @@ class user_seeder extends Seeder
             'role_id' => '1'
 
         ]);
-        //2
+
+        //Administradores Sociedades
         DB::table('users')->insert([
-            'nombre' => 'user',
-            'apellido' => 'user',
+            'nombre' => 'Pescadores',
+            'apellido' => 'Pescadores',
+            'telefono' => 12345678,
+            'email' => 'pescadores@gmail.com',
+            'email_verified_at' => date('Y-m-d H:i:s'),
+            'password' => bcrypt('pescadorespescadores'),
+            'role_id' => '2'
+        ]);
+
+        DB::table('users')->insert([
+            'nombre' => 'Armonia',
+            'apellido' => 'Armonia',
+            'telefono' => 12345678,
+            'email' => 'armonia@gmail.com',
+            'email_verified_at' => date('Y-m-d H:i:s'),
+            'password' => bcrypt('armoniaarmonia'),
+            'role_id' => '2'
+        ]);
+
+        DB::table('users')->insert([
+            'nombre' => 'Bascongada',
+            'apellido' => 'Bascongada',
+            'telefono' => 12345678,
+            'email' => 'bascongada@gmail.com',
+            'email_verified_at' => date('Y-m-d H:i:s'),
+            'password' => bcrypt('bascongadabascongada'),
+            'role_id' => '2'
+        ]);
+
+        //Socios
+        DB::table('users')->insert([
+            'nombre' => 'User',
+            'apellido' => 'User',
             'telefono' => 12345678,
             'email' => 'user@example.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('usuariousuario'),
-            'role_id' => '3'
-        ]);
-        //3
-        DB::table('users')->insert([
-            'nombre' => 'aimar',
-            'apellido' => 'peruchena',
-            'telefono' => 12345678,
-            'email' => 'aimarperuchena@gmail.com',
-            'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('aimaraimar'),
+            'password' => bcrypt('useruser'),
             'role_id' => '3'
         ]);
 
-        //4
         DB::table('users')->insert([
-            'nombre' => 'jeffry',
-            'apellido' => 'molina',
+            'nombre' => 'Aitor',
+            'apellido' => 'Ortiz',
             'telefono' => 12345678,
-            'email' => 'jeffry@gmail.com',
+            'email' => 'aitorortiz@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('jeffryjeffry'),
+            'password' => bcrypt('aitoraitor'),
             'role_id' => '3'
         ]);
-        //5
+
         DB::table('users')->insert([
-            'nombre' => 'adrian',
-            'apellido' => 'rodriguez',
+            'nombre' => 'Jefry',
+            'apellido' => 'Molina',
             'telefono' => 12345678,
-            'email' => 'adrian@gmail.com',
+            'email' => 'jefry@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('adrianadrian'),
+            'password' => bcrypt('jefryjefry'),
             'role_id' => '3'
         ]);
-        //6
+
         DB::table('users')->insert([
-            'nombre' => 'tomas',
-            'apellido' => 'tomas',
+            'nombre' => 'Tomas',
+            'apellido' => 'San Sebastian',
             'telefono' => 12345678,
             'email' => 'tomas@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
             'password' => bcrypt('tomastomas'),
             'role_id' => '3'
         ]);
-        //7
+
         DB::table('users')->insert([
-            'nombre' => 'maria',
-            'apellido' => 'maria',
+            'nombre' => 'Pepe',
+            'apellido' => 'Ortiz',
             'telefono' => 12345678,
             'email' => 'maria@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
             'password' => bcrypt('mariamaria'),
             'role_id' => '3'
-        ]);
-        //8
-        DB::table('users')->insert([
-            'nombre' => 'pescadores_admin',
-            'apellido' => 'pescadores_admin',
-            'telefono' => 12345678,
-            'email' => 'pescadores_admin@gmail.com',
-            'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('pescadorespescadores'),
-            'role_id' => '2'
-        ]);
-        //9
-        DB::table('users')->insert([
-            'nombre' => 'armonia_admin',
-            'apellido' => 'armonia_admin',
-            'telefono' => 12345678,
-            'email' => 'armonia_admin@gmail.com',
-            'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('armoniaarmonia'),
-            'role_id' => '2'
-        ]);
-        //10
-        DB::table('users')->insert([
-            'nombre' => 'bascongada_admin',
-            'apellido' => 'bascongada_admin',
-            'telefono' => 12345678,
-            'email' => 'bascongada_admin@gmail.com',
-            'email_verified_at' => date('Y-m-d H:i:s'),
-            'password' => bcrypt('bascongadabascongada'),
-            'role_id' => '2'
         ]);
 
         DB::table('users')->insert([
@@ -123,22 +114,23 @@ class user_seeder extends Seeder
             'password' => bcrypt('pedropedro'),
             'role_id' => '3'
         ]);
+
         DB::table('users')->insert([
-            'nombre' => 'Iker',
-            'apellido' => 'Iker',
+            'nombre' => 'Zubiri',
+            'apellido' => 'Manteo',
             'telefono' => 12345678,
             'email' => 'IkerIker@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
             'password' => bcrypt('ikeriker'),
             'role_id' => '3'
         ]);
+
         DB::table('users')->insert([
             'nombre' => 'Alejandro',
             'apellido' => 'Villareal',
             'telefono' => 12345678,
             'email' => 'alejandro@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s'),
-
             'password' => bcrypt('alejandroalejandro'),
             'role_id' => '3'
         ]);

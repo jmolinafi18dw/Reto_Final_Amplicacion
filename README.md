@@ -8,9 +8,9 @@ adrianadrian
 aimarperuchena@gmail.com || 
 aimaraimar
 
-- Jeffry ->
-jeffry@gmail.com || 
-jeffryjeffry
+- Jefry ->
+jefry@gmail.com || 
+jefryjefry
 
 ## Admin Sociedad
 

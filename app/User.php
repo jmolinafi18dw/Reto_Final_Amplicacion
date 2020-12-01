@@ -80,4 +80,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getRole(){
         return ($this->role_id);
     }
+
+    public function message()
+    {
+        return $this->hasMany(Message::class);
+    }
 }

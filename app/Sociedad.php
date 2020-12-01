@@ -43,4 +43,9 @@ class Sociedad extends Model
     public function reservas(){
         return $this->hasMany(Reserva::class);
     }
+
+    public function message()
+    {
+        return $this->hasMany(Message::class);
+    }
 }

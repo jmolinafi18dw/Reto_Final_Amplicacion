@@ -31,8 +31,10 @@
             @endif
             <div class="card-body">
               <p class="card-text">{{$suscripcion->nombre}}</p>
-
             </div>
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg mb-5" href="/messages/sociedadChat" role="button">Chat</a>
+              </div>
           </div>
           @endforeach
         @endif

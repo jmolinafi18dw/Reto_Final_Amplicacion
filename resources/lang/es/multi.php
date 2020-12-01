@@ -112,5 +112,6 @@ return [
     "reservafecha"=>'Reserva Fecha',
     "plano"=>'Plano',
     "lineafactura"=>'Lineas Facturas',
+    "noticias"=>'Noticias',
 
 ];

@@ -112,5 +112,6 @@ return [
     "reservafecha"=>'Book Date',
     "plano"=>'Blueprint',
     "lineafactura"=>'Invoice Lines',
+    "noticias"=>'News',
 
 ];

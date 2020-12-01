@@ -166,3 +166,6 @@ Route::get('/webmaster/sociAceptado','WebMasterController@sociAceptado')->name('
 Route::get('/webmaster/socioIndex','WebMasterController@socioIndex')->name('webmaster.socioIndex');
 Route::get('/webmaster/socioRestore/{id}','WebMasterController@socioRestore');
 Route::get('/webmaster/socioDestroy/{id}','WebMasterController@socioDestroy');
+
+
+Route::get('/noticia', 'NoticiaController@index')->name('noticia.listado');

@@ -55,6 +55,7 @@ return [
     "incidencias_title"=>'Gertakariak',
     "incidencias"=>'Bazkideekin gertakarien komunikabidea',
     "sociedad_confia"=>'Guregan konfiatzen duten sozietateak',
+    "noticias"=>'Berriak',
 
 
 ];

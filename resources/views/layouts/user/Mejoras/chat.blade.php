@@ -9,18 +9,28 @@
 		<div class="card">
 			<div class="row g-0">
 				<div class="col-12 col-lg-5 col-xl-3 border-right">
-                    @foreach($users as $user)
-
+                    @foreach($sociedadusers as $usuarios)
+                    @if ($logeado->id===$usuarios->users->id)
 					<a href="#" class="list-group-item list-group-item-action border-0">
 						<div class="d-flex align-items-start">
 							<img src="/assets/img/profile.jpg" class="rounded-circle mr-1" alt="Fiona Green" width="40" height="40">
 							<div class="flex-grow-1 ml-3">
-                                {{$user->nombre}}
+                                {{$usuarios->users->nombre}}
+                                <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+							</div>
+						</div>
+					</a>
+                    @else
+					<a href="#" class="list-group-item list-group-item-action border-0">
+						<div class="d-flex align-items-start">
+							<img src="/assets/img/profile.jpg" class="rounded-circle mr-1" alt="Fiona Green" width="40" height="40">
+							<div class="flex-grow-1 ml-3">
+                                {{$usuarios->users->nombre}}
                                 <div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div>
 							</div>
 						</div>
 					</a>
-
+                    @endif
                     @endforeach
 
 
@@ -29,23 +39,32 @@
 				<div class="col-12 col-lg-7 col-xl-9">
 					<div class="position-relative">
 						<div class="chat-messages p-4">
-
-
                             @foreach($mensajes as $mensaje)
+                            @if ($logeado->id===$mensaje->user_id)
 
-							<div class="mensajes chat-message-left mb-4">
+							<div class="mensajes chat-message-right mb-4">
+								<div>
+									<img src="/assets/img/profile.jpg" class="rounded-circle ml-1" alt="Chris Wood" width="40" height="40">
+									<div class="text-muted small text-nowrap mt-2">12:00</div>
+								</div>
+								<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+									<div class="font-weight-bold mb-1"> {{$mensaje->user->nombre}}</div>
+                                    {{$mensaje->mensaje}}
+                                </div>
+                            </div>
+                            @else
+                            <div class="mensajes chat-message-left mb-4">
 								<div>
 									<img src="/assets/img/profile.jpg" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
-									<div class="text-muted small text-nowrap mt-2">12:00</div>
+									<div class="text-muted small text-nowrap mt-2">date()</div>
 								</div>
 								<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
 									<div class="font-weight-bold mb-1"> {{$mensaje->user->nombre}}</div>
                                     {{$mensaje->mensaje}}
                                 </div>
-							</div>
+                            </div>
+                            @endif
                             @endforeach
-
-
 						</div>
 					</div>
 
@@ -87,12 +106,12 @@ body{margin-top:20px;}
 }
 
 .chat-message-left {
-    margin-right: 100%;
+    margin-right: 50%;
 }
 
 .chat-message-right {
     flex-direction: row-reverse;
-    margin-left: auto
+    margin-left: 50%
 }
 .py-3 {
     padding-top: 1rem!important;
@@ -110,16 +129,5 @@ body{margin-top:20px;}
 }
 
 </style>
-{{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script>
-    var usuario = document.getElementsByClassName("usuario");
-
-    if (usuario==usuario) {
-        $('.mensajes').removeClass("chat-message-left").addClass("chat-message-right");
-
-        console.log('si es usuario');
-    }
-
-</script> --}}
 
 @endsection

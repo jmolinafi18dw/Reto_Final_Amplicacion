@@ -3,25 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use App\UsuarioSociedad;
 use App\User;
 use Illuminate\Http\Request;
+use Auth;
+
 
 class MessageController extends Controller
 {
     public function Chat()
     {
-        $mensajes=Message::all();
-        $users=User::all();
+        $logeado = Auth::user();
+        $mensajes=Message::where('sociedad_id', 2)->get();
+        $sociedadusers=UsuarioSociedad::where('sociedad_id', 2)->get();
 
-        return view('layouts.user.Lineas.chat')->with('mensajes', $mensajes)->with('users', $users);
+
+        return view('layouts.user.Mejoras.chat')->with('mensajes', $mensajes)->with('logeado', $logeado)->with('sociedadusers',$sociedadusers);
     }
 
-    // public function incidenciaIndex()
-    // {
-    //     $user = Auth::user();
-    //     $sociedad = Sociedad::where('administrador_id', $user->id)->first();
-    //     $incidencias = Incidencia::where('sociedad_id', $sociedad->id)->where('estado', 'pendiente')->get();
-    //     $tipo = 1;
-    //     return view('layouts.admin.incidencias.index')->with('sociedad', $sociedad)->with('incidencias', $incidencias)->with('tipo', $tipo);
-    // }
 }

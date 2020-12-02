@@ -26,6 +26,10 @@ class DatabaseSeeder extends Seeder
         $this->call(linea_seeder::class);
         $this->call(peticiones_sociedad_seeder::class);
         $this->call(PeticionNuevaSociedadSeeder::class);
+        $this->call(messages_seeder::class);
+        $this->call(Noticias_seeder::class);
+
+
 
     }
 }

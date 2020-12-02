@@ -139,8 +139,9 @@ Route::post('/admin/lineaUpdate','AdminController@lineaUpdate')->name('admin.lin
 //SOCIOS
 Route::get('/admin/userIndex','AdminController@userIndex')->name('admin.userIndex');
 
-//MENSAJES
-Route::get('/messages/sociedadChat','MessageController@Chat')->name('messages.sociedadChat');
+//Mejoras
+Route::get('/messages/sociedadChat/{id}','MessageController@Chat')->name('messages.sociedadChat');
+Route::get('/noticias','NewController@index')->name('noticias.Index');
 
 //Productos webmaster
 

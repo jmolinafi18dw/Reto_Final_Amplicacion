@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<br><br>
+<br>
 <div class="container">
     <h1 class="text-center">Sección de Noticias</h1>
     <br>
@@ -16,7 +16,7 @@
       <p class="card-text">{{$noticia->contenido}}</p>
     </div>
     <div class="card-footer text-muted">Publicado por: {{$noticia->sociedad->nombre}}</div>
-    <div class="card-footer text-muted">Fecha de Publicación: {{$noticia->created_at->isoFormat('d-m-Y')}}
+    <div class="card-footer text-muted">Fecha de Publicación: {{$noticia->created_at->isoFormat('D-M-Y')}}
     </div>
         </div>
       </div>

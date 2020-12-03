@@ -11,11 +11,11 @@ use Auth;
 
 class MessageController extends Controller
 {
-    public function Chat()
+    public function Chat($id)
     {
         $logeado = Auth::user();
-        $mensajes=Message::where('sociedad_id', 2)->get();
-        $sociedadusers=UsuarioSociedad::where('sociedad_id', 2)->get();
+        $mensajes=Message::where('sociedad_id', $id)->get();
+        $sociedadusers=UsuarioSociedad::where('sociedad_id', $id)->get();
 
 
         return view('layouts.user.Mejoras.chat')

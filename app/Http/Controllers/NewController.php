@@ -12,7 +12,7 @@ class NewController extends Controller
         // $logeado = Auth::user();
         // $mensajes=Message::where('sociedad_id', 2)->get();
         // $sociedadusers=UsuarioSociedad::where('sociedad_id', 2)->get();
-        $noticias=Noticia::all();
+        $noticias=Noticia::orderBy('created_at', 'desc')->get();
 
         return view('layouts.user.Mejoras.noticias')->with('noticias',$noticias);
     }

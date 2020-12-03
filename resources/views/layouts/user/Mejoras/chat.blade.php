@@ -62,6 +62,7 @@
 									<div class="font-weight-bold mb-1"> {{$mensaje->user->nombre}}</div>
                                     {{$mensaje->mensaje}}
                                 </div>
+
                             </div>
                             @endif
                             @endforeach

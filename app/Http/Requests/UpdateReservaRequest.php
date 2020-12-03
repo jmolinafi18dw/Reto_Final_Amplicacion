@@ -25,7 +25,7 @@ class UpdateReservaRequest extends FormRequest
      {
        return [
          'personas' => 'required|integer|min:2',
-         'mesa' => 'required'
+         'mesa' => 'required',
          'fecha' => 'required|date|after:today',
          'tipo' => 'required'
        ];

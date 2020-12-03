@@ -31,10 +31,14 @@
             @endif
             <div class="card-body">
               <p class="card-text">{{$suscripcion->nombre}}</p>
+
             </div>
             <div class="card-text d-flex justify-content-end">
               <button type="button" class="btn btn-secondary btn-sm m-1">Chat</button>
             </div>
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg mb-5" href="/messages/sociedadChat/2" role="button">Chat</a>
+              </div>
           </div>
           @endforeach
         @endif

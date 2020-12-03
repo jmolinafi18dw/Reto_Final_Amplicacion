@@ -14,32 +14,44 @@ class messages_seeder extends Seeder
         DB::table('messages')->insert([
             'user_id'=>9,
             'sociedad_id'=>2,
-            'mensaje'=>'¿Hola que tal?'
+            'mensaje'=>'Hola!!!',
+            'created_at' => '2020-12-02 09:25:00',
+            'updated_at' => '2020-12-02 09:25:00',
         ]);
         DB::table('messages')->insert([
             'user_id'=>5,
             'sociedad_id'=>2,
-            'mensaje'=>'Muy bien y tu?'
+            'mensaje'=>'Hola!!',
+            'created_at' => '2020-12-02 09:26:00',
+            'updated_at' => '2020-12-02 09:26:00',
         ]);
         DB::table('messages')->insert([
             'user_id'=>9,
             'sociedad_id'=>2,
-            'mensaje'=>'¿A que hora estareis hoy?'
+            'mensaje'=>'¿A que hora estareis hoy?',
+            'created_at' => '2020-12-02 09:26:00',
+            'updated_at' => '2020-12-02 09:26:00',
         ]);
         DB::table('messages')->insert([
             'user_id'=>7,
             'sociedad_id'=>2,
-            'mensaje'=>'Sobre las 20:00'
+            'mensaje'=>'Sobre las 20:00',
+            'created_at' => '2020-12-02 09:30:00',
+            'updated_at' => '2020-12-02 09:30:00',
         ]);
         DB::table('messages')->insert([
             'user_id'=>9,
             'sociedad_id'=>2,
-            'mensaje'=>'ok gracias!!'
+            'mensaje'=>'ok gracias!!',
+            'created_at' => '2020-12-02 09:31:00',
+            'updated_at' => '2020-12-02 09:31:00',
         ]);
         DB::table('messages')->insert([
             'user_id'=>7,
             'sociedad_id'=>2,
-            'mensaje'=>'nada!!'
+            'mensaje'=>'nada!!',
+            'created_at' => '2020-12-02 09:35:00',
+            'updated_at' => '2020-12-02 09:35:00',
         ]);
     }
 }

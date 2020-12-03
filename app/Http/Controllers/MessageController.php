@@ -18,7 +18,10 @@ class MessageController extends Controller
         $sociedadusers=UsuarioSociedad::where('sociedad_id', 2)->get();
 
 
-        return view('layouts.user.Mejoras.chat')->with('mensajes', $mensajes)->with('logeado', $logeado)->with('sociedadusers',$sociedadusers);
+        return view('layouts.user.Mejoras.chat')
+        ->with('mensajes', $mensajes)
+        ->with('logeado', $logeado)
+        ->with('sociedadusers',$sociedadusers);
     }
 
 }

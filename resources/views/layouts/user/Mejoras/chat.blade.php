@@ -45,7 +45,7 @@
 							<div class="mensajes chat-message-right mb-4">
 								<div>
 									<img src="/assets/img/profile.jpg" class="rounded-circle ml-1" alt="Chris Wood" width="40" height="40">
-									<div class="text-muted small text-nowrap mt-2">12:00</div>
+									<div class="text-muted small text-nowrap mt-2">{{ $mensaje->created_at->isoFormat('H:m A') }}</div>
 								</div>
 								<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
 									<div class="font-weight-bold mb-1"> {{$mensaje->user->nombre}}</div>
@@ -56,7 +56,7 @@
                             <div class="mensajes chat-message-left mb-4">
 								<div>
 									<img src="/assets/img/profile.jpg" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
-									<div class="text-muted small text-nowrap mt-2">date()</div>
+									<div class="text-muted small text-nowrap mt-2">{{ $mensaje->created_at->isoFormat('H:m A') }}</div>
 								</div>
 								<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
 									<div class="font-weight-bold mb-1"> {{$mensaje->user->nombre}}</div>

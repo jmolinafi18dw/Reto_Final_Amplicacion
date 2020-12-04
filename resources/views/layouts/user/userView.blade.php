@@ -14,10 +14,10 @@
             @foreach($sociedades ?? '' as $sociedad)
             <div class="card m-2" style="width: 18rem; height:18rem;">
               @if($sociedad)
-                <a href="{{ route('sociedad.info', $sociedad -> id) }}"><img src="{{$sociedad->link_imagen}}" class="card-img-top" alt="..."></a>
+                <a href="{{ route('sociedad.info', $sociedad -> id) }}"><img src="{{$sociedad->link_imagen}}" class="card-img-top" alt="..." height="220vh"></a>
               @endif
               <div class="card-body">
-                <p class="card-text">{{$sociedad -> nombre}}</p>
+                <p class="card-text">{{$sociedad->nombre}}</p>
               </div>
             </div>
             @endforeach
@@ -27,7 +27,7 @@
           @foreach( $suscripciones ?? '' as $suscripcion)
           <div class="card m-2" style="width: 18rem; height:18rem;">
             @if($suscripcion)
-              <a href="{{ route('sociedad.info', $suscripcion -> id) }}"><img src="{{$suscripcion->link_imagen}}" class="card-img-top" alt="..."></a>
+              <a href="{{ route('sociedad.info', $suscripcion -> id) }}"><img src="{{$suscripcion->link_imagen}}" class="card-img-top" alt="..." height="150vh"></a>
             @endif
             <div class="card-body">
               <p class="card-text">{{$suscripcion->nombre}}</p>

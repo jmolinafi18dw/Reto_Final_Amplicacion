@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
-<br><br>
-<main class="content">
-    <div class="container p-0">
-		<div class="card">
+<main class="content" height="100%">
+    <div class="container p-0 mb-0">
+        <h1 class="text-center mt-4 mb-2">{{$sociedad->nombre}}</h1>
+		<div class="card" height=100px>
 			<div class="row g-0">
-				<div class="col-12 col-lg-5 col-xl-3 border-right">
+				<div class="col-12 col-xs-12 col-md-3 col-lg-3 col-xl-3 border-right">
                     @foreach($sociedadusers as $usuarios)
                     @if ($logeado->id===$usuarios->users->id)
 					<a href="#" class="list-group-item list-group-item-action border-0">
@@ -29,11 +29,9 @@
 					</a>
                     @endif
                     @endforeach
-
-
 					<hr class="d-block d-lg-none mt-1 mb-0">
 				</div>
-				<div class="col-12 col-lg-7 col-xl-9">
+				<div class="col-12 col-xs-12 col-md-9 col-lg-9 col-xl-9">
 					<div class="position-relative">
 						<div class="chat-messages p-4">
                             @foreach($mensajes as $mensaje)
@@ -78,9 +76,12 @@
 		</div>
 	</div>
 </main>
-<br><br>
 <style>
 body{margin-top:20px;}
+
+/* content{
+    position:fixed;
+} */
 
 .chat-online {
     color: #34ce57

@@ -22,6 +22,6 @@ class UsuarioSociedad extends Model
     }
 
     public function sociedades(){
-        return $this->belongsTo(Sociedad::class);
+        return $this->belongsToMany(Sociedad::class);
     }
 }

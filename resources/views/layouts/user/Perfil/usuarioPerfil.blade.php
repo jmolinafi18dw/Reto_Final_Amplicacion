@@ -4,12 +4,9 @@
 <!-- Perfil de usuario -->
 <div class="container">
   <div class="row p-5">
-    <div class="col-12 col-md-6 col-lg-6 justify-conten-center">
-      <div class="card asaa" style="width: 18rem;">
+    <div class="col-12 col-md-6 col-lg-6 justify-conten-center mt-5">
+      <div class="card asaa " style="width: 18rem;" >
         <img src="/assets/img/profile.jpg" class="card-img-top" alt="fotoPerfil">
-        <div class="card-body">
-          <p class="card-text">{{$user->nombre}}</p>
-        </div>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-6">
@@ -22,8 +19,12 @@
               <input type="text" class="form-control" style="width: 300px;" readonly value="{{$user->nombre}}">
             </div>
             <div class="d-flex form-group justify-content-around">
-              <label for="exampleInputEmail1">{{ __('multi.nomform') }}</label>
+              <label for="exampleInputEmail1">{{ __('multi.apellidoform') }}</label>
               <input type="text" class="form-control" style="width: 300px;" readonly value="{{$user->apellido}}">
+            </div>
+            <div class="d-flex form-group justify-content-around">
+                <label for="exampleInputEmail1">{{ __('multi.telform') }}</label>
+                <input type="email" class="form-control" style="width: 300px;" readonly value="{{$user->telefono}}">
             </div>
             <div class="d-flex form-group justify-content-around">
               <label for="exampleInputEmail1">{{ __('multi.emailform') }}</label>

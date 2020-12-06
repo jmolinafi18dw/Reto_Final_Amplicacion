@@ -3,7 +3,7 @@
 <main class="content" height="100%">
     <div class="container p-0 mb-0">
         <h1 class="text-center mt-4 mb-2">{{$sociedad->nombre}}</h1>
-		<div class="card">
+		<div class="card" height=100px>
 			<div class="row g-0">
 				<div class="col-12 col-xs-12 col-md-3 col-lg-3 col-xl-3 border-right">
                     @foreach($sociedadusers as $usuarios)
@@ -31,8 +31,9 @@
                     @endforeach
 					<hr class="d-block d-lg-none mt-1 mb-0">
 				</div>
-				<div class="col-12 col-xs-12 col-md-9 col-lg-9 col-xl-9">
+				<div class="col-12 col-xs-12 col-md-9 col-lg-9 col-xl-9 ">
 					<div class="position-relative">
+                        <d
 						<div class="chat-messages p-4">
                             @foreach($mensajes as $mensaje)
                             @if ($logeado->id===$mensaje->user_id)
@@ -81,6 +82,10 @@
 </main>
 <style>
 body{margin-top:20px;}
+
+/* content{
+    position:fixed;
+} */
 
 .chat-online {
     color: #34ce57

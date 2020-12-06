@@ -18,6 +18,16 @@ class ProfileController extends Controller
     $sociedades=Sociedad::all();
     return view('layouts.user.Perfil.usuarioPerfil')->with('user', $user)->with('suscripciones' , $suscripciones)->with('sociedadSocio',$sociedadSocio)->with('sociedades',$sociedades);
   }
+
+  public function profiles($id){
+
+    $user=User::find($id);
+    $sociedades=UsuarioSociedad::all();
+
+
+    return view('layouts.user.Perfil.usuariosPerfil')->with('user',$user)->with('sociedades',$sociedades);
+
+  }
   public function deleteSuscripcion($id){
     $user = Auth::user();
     $suscripcion = UsuarioSociedad::where('sociedad_id',$id)->where('user_id',$user->id)->first();

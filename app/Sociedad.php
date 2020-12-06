@@ -53,4 +53,9 @@ class Sociedad extends Model
     {
         return $this->hasMany(Noticia::class);
     }
+
+    public function usuarioSociedades(){
+        return $this->belongsToMany(UsuarioSociedad::class);
+    }
+
 }

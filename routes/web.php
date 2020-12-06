@@ -58,6 +58,7 @@ Route::get('/reserva/{sociedad_id}/{tipo_id}/{old_reserva}/success','ReservaCont
 
 //Perfil usuario
 Route::get('/perfil','ProfileController@profile')->name('profile.index');
+Route::get('/perfiles/{id}','ProfileController@profiles')->name('profiles.index');
 Route::get('/perfil/desuscribirse/{id}','ProfileController@deleteSuscripcion')->name('profile.deleteSus');
 Route::post('/perfil/update','ProfileController@update')->name('profile.update');
 
@@ -141,6 +142,7 @@ Route::get('/admin/userIndex','AdminController@userIndex')->name('admin.userInde
 
 //Mejoras
 Route::get('/messages/sociedadChat/{id}','MessageController@Chat')->name('messages.sociedadChat');
+Route::post('/messages/mensajeStore','MessageController@Store')->name('messages.store');
 Route::get('/noticias','NewController@index')->name('noticias.Index');
 
 //Productos webmaster

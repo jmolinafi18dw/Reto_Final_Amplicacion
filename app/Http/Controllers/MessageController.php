@@ -27,4 +27,18 @@ class MessageController extends Controller
         ->with('sociedadusers',$sociedadusers);
     }
 
+    public function Store(Request $request)
+    {
+        $logeado = Auth::user();
+
+        $mensaje = new Message;
+        $mensaje->user_id=$logeado->id;
+        $mensaje->sociedad_id=2;
+        $mensaje->mensaje=$request->input('mensa');
+        $mensaje->save();
+
+        return redirect('/messages/sociedadChat/2');
+
+    }
+
 }

@@ -35,21 +35,21 @@
       </div>
     </div>
     </div>
-    {{-- <div class="text-center mb-5">
+    <div class="text-center mb-5">
       <hr class="m-5">
       <div class="">
         <h1 class="mb-5">{{ __('multi.suscrippersonal') }}</h1>
         <ul class="list-group">
           @foreach($sociedades as $sociedad)
-          @if($sociedad->user_id==$user->id)
+          @if(($sociedad->id===2)|($sociedad->id===3))
           <li class="list-group-item d-flex justify-content-between align-items-center">
-            {{$sociedad->sociedades->id}}
+            {{$sociedad->nombre}}
           </li>
           @endif
           @endforeach
         </ul>
       </div>
-    </div> --}}
+    </div>
 </div>
 
 @endsection

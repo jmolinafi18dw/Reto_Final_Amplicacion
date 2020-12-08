@@ -22,7 +22,7 @@ class ProfileController extends Controller
   public function profiles($id){
 
     $user=User::find($id);
-    $sociedades=UsuarioSociedad::all();
+    $sociedades=Sociedad::all();
 
 
     return view('layouts.user.Perfil.usuariosPerfil')->with('user',$user)->with('sociedades',$sociedades);

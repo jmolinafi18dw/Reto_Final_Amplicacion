@@ -12,21 +12,14 @@ class messages_seeder extends Seeder
     public function run()
     {
         DB::table('messages')->insert([
-            'user_id'=>9,
+            'user_id'=>6,
             'sociedad_id'=>2,
             'mensaje'=>'Hola!!!',
             'created_at' => '2020-12-02 09:25:00',
             'updated_at' => '2020-12-02 09:25:00',
         ]);
         DB::table('messages')->insert([
-            'user_id'=>5,
-            'sociedad_id'=>2,
-            'mensaje'=>'Hola!!',
-            'created_at' => '2020-12-02 09:26:00',
-            'updated_at' => '2020-12-02 09:26:00',
-        ]);
-        DB::table('messages')->insert([
-            'user_id'=>9,
+            'user_id'=>6,
             'sociedad_id'=>2,
             'mensaje'=>'¿A que hora estareis hoy?',
             'created_at' => '2020-12-02 09:26:00',
@@ -40,7 +33,7 @@ class messages_seeder extends Seeder
             'updated_at' => '2020-12-02 09:30:00',
         ]);
         DB::table('messages')->insert([
-            'user_id'=>9,
+            'user_id'=>6,
             'sociedad_id'=>2,
             'mensaje'=>'ok gracias!!',
             'created_at' => '2020-12-02 09:31:00',

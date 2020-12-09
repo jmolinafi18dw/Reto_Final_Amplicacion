@@ -41,11 +41,19 @@ class sociedad_user_seeder extends Seeder
             'user_id' => '10'
         ]);
         DB::table('sociedad_user')->insert([
-            'sociedad_id' => '3',
+            'sociedad_id' => '2',
             'user_id' => '6'
         ]);
         DB::table('sociedad_user')->insert([
             'sociedad_id' => '2',
+            'user_id' => '7'
+        ]);
+        DB::table('sociedad_user')->insert([
+            'sociedad_id' => '3',
+            'user_id' => '6'
+        ]);
+        DB::table('sociedad_user')->insert([
+            'sociedad_id' => '3',
             'user_id' => '7'
         ]);
     }

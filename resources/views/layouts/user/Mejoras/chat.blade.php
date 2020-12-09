@@ -2,7 +2,7 @@
 @section('content')
 <main class="content" height="100%">
     <div class="container p-0 mb-0">
-        <h1 class="text-center mt-4 mb-2">{{$sociedad->nombre}}</h1>
+        <h1 class="text-center mt-3 mb-2">{{$sociedad->nombre}}</h1>
 		<div class="card">
 			<div class="row g-0">
 				<div class="col-12 col-xs-12 col-md-3 col-lg-3 col-xl-3 border-right">

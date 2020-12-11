@@ -1,12 +1,12 @@
 ## Usuarios
 
-- Adrian ->
-adrian@gmail.com || 
-adrianadrian
+- User ->
+user@gmail.com || 
+useruser
 
-- Aimar ->
-aimarperuchena@gmail.com || 
-aimaraimar
+- Aitor ->
+aitorortiz@gmail.com || 
+aitoraitor
 
 - Jefry ->
 jefry@gmail.com || 
